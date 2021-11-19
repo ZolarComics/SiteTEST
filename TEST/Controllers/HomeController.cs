@@ -37,7 +37,7 @@ namespace TEST.Controllers
                     smtp.Host = "smtp.gmail.com";
                     smtp.EnableSsl = true;
                     NetworkCredential NetworkCred = new NetworkCredential(model.Email, model.Password);
-                    smtp.UseDefaultCredentials = true;
+                    smtp.UseDefaultCredentials = false;
                     smtp.Credentials = NetworkCred;
                     smtp.Port = 587;
                     smtp.Send(mm);
